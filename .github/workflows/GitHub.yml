@@ -3,7 +3,6 @@ on: push
 
 jobs:
   my-job:
-    id: 1
     name: My Job
     runs-on: ubuntu-latest
     steps:
