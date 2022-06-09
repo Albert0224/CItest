@@ -1,0 +1,19 @@
+name: GitHubFlask
+on: push
+
+jobs:
+  my-job:
+    id: 1
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v3 
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        python3 server.py > log.txt 2>&1 &
